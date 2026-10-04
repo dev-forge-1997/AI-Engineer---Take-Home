@@ -1,0 +1,10 @@
+digraph G {
+  rankdir=TB;
+  brief -> planner -> researcher -> writer -> editor;
+  editor -> writer [label="revision"];
+  editor -> fact_checker [label="approved"];
+  fact_checker -> researcher [label="citation problem"];
+  fact_checker -> final [label="verified"];
+  researcher -> web [style=dashed];
+  fact_checker -> http [style=dashed];
+}

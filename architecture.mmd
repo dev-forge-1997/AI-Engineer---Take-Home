@@ -1,0 +1,11 @@
+flowchart TD
+  A[Book Brief] --> B[Planner]
+  B --> C[Researcher]
+  C --> D[Writer]
+  D --> E[Editor]
+  E -->|Revision needed| D
+  E -->|Approved| F[Fact Checker]
+  F -->|Citation problem| C
+  F -->|Verified| G[Final Book]
+  C -.-> H[Public Web Sources]
+  F -.-> I[HTTP Source Validation]
